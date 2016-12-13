@@ -1,0 +1,61 @@
+# This is the configuration file for SpotPriceGet.py and HeatPumpControl.py python program.
+# Program version 0.3.1
+# If there is an error reading this file, a file called log.txt is written.
+
+[Settings]
+
+# www address for getting the data
+URL = http://www.nordpoolspot.com/api/marketdata/page/35?currency=,,EUR,EUR
+
+# Name and path of the output file
+OutputFile = /home/pi/rpi_heating_control/hours.txt
+
+# Output file type, options: p = prices, l = levels
+OutputType = p
+
+
+#Level values/commands, 'atw' +register + value (the command being sent), level1 for the highest price
+Level1 = True
+Level2 = True
+Level3 = True
+Level4 = True
+Level5 = True
+Level6 = False
+Level7 = False
+Level8 = False
+Level9 = False
+Level10 = False
+Level11 = False
+Level12 = False
+Level13 = False
+Level14 = False
+Level15 = False
+Level16 = False
+Level17 = False
+Level18 = False
+Level19 = False
+Level20 = False
+Level21 = False
+Level22 = False
+Level23 = False
+Level24 = False
+
+
+#Logging on/off
+Log = on
+
+#Log file name and path
+LogFile = log.txt
+
+#Log prices on/off
+LogPrice = off
+
+#User time zone, UTC+x, Finland is 2, Sweden 1, Data is assumed to be in CET i.e. 1
+TimeZone = 1
+
+#Price limit for turning off the heating
+PriceLimit = 30
+MaxSkipped = 3
+
+GPIOpin = 5
+
